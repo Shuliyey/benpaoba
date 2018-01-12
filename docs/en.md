@@ -1,6 +1,6 @@
 # 奔跑吧(run)
 ## Overview
-benpaoba(run) is a cli based program that runs a collection of scripts in specified order
+benpaoba(run) is a cli based program that runs a collection of scripts in specified order, it's a handy tool for Devops Engineers
 
 ## Usage
 ### command line

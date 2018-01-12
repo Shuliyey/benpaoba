@@ -4,6 +4,6 @@ import (
   "fmt"
 )
 
-func Hey() {
+func version() {
   fmt.Println("package task")
 }
