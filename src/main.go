@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-  info := lang.Info{Name: "奔跑吧(bēn pǎo ba)", Usage: "脚本执行", Version: "0.0.1"}
+  info := lang.InfoCN
   app := cli.NewApp()
   app.Name = info.Name
   app.Usage = info.Usage
