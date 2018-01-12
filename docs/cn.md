@@ -8,7 +8,7 @@
 benpaoba -p 3 -o minimum
 ```
 
-### yaml/程序 格式
+### yaml/文件 格式
 ```yaml
 - scripts/
   - task1.sh
