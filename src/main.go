@@ -5,10 +5,14 @@ import (
   "os"
   "./lang"
   "github.com/urfave/cli"
+  "github.com/cloudfoundry-attic/jibber_jabber"
 )
 
 func main() {
-  info := lang.InfoCN
+  var info lang.Info
+  if _, err := jibber_jabber.DetectLanguage(); err == nil {
+    info = lang.InfoCN
+  }
   app := cli.NewApp()
   app.Name = info.Name
   app.Usage = info.Usage

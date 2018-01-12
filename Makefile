@@ -3,6 +3,7 @@ all: deps build
 .PHONY: deps
 deps:
 	go get -v github.com/urfave/cli
+	go get -v github.com/cloudfoundry-attic/jibber_jabber
 
 .PHONY: build
 build: deps
