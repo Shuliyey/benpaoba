@@ -1,0 +1,7 @@
+language: go
+
+script:
+  - make
+  - ./bin/benpaoba
+  - ./bin/benpaoba --version
+  - ./bin/benpaoba --help

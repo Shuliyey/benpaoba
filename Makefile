@@ -7,8 +7,8 @@ deps:
 
 .PHONY: build
 build: deps
-	mkdir -p dist
-	go build -o dist/benpaoba src/*.go
+	mkdir -p bin
+	go build -o bin/benpaoba src/*.go
 
 .PHONY: run
 run:
