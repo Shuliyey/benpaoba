@@ -4,6 +4,7 @@ all: deps build
 deps:
 	go get -v github.com/urfave/cli
 	go get -v github.com/cloudfoundry-attic/jibber_jabber
+	go get -v github.com/satori/go.uuid
 
 .PHONY: build
 build: deps
