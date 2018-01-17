@@ -1,4 +1,5 @@
-# 奔跑吧(bēn pǎo ba) [![Build Status](https://travis-ci.org/Shuliyey/benpaoba.svg?branch=master)](https://travis-ci.org/Shuliyey/benpaoba)
+# 奔跑吧(bēn pǎo ba)
+[![Build Status](https://travis-ci.org/Shuliyey/benpaoba.svg?branch=master)](https://travis-ci.org/Shuliyey/benpaoba)
 ## 简介
 奔跑吧(bēn pǎo ba)是一个终端程序，用来执行有按先后顺序规定的终端脚本，是运维工程师的神器
 
