@@ -9,8 +9,8 @@ script:
   - ./bin/benpaoba
   - ./bin/benpaoba --version
   - ./bin/benpaoba --help
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv ./bin/benpaoba ./bin/benpaoba.`uname -s`.`uname -r`.`uname -m`; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then mv ./bin/benpaoba ./bin/benpaoba.`uname -s`.`uname -r`.`uname -m`; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv ./bin/benpaoba ./bin/benpaoba.${TRAVIS_TAG}.`uname -s`.`uname -r`.`uname -m`; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then mv ./bin/benpaoba ./bin/benpaoba.${TRAVIS_TAG}.`uname -s`.`uname -r`.`uname -m`; fi
 
 before_deploy:
   - echo "deploying $(ls ./bin/benpaoba.*) to github release - ${TRAVIS_TAG}"
