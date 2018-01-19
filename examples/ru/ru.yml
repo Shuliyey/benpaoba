@@ -1,0 +1,44 @@
+tasks:
+  t1:
+    name:
+    description: Пло́х тот солда́т, кото́рый не мечта́ет стать генера́лом
+    scripts:
+      - ./t1.sh
+  t2:
+    name: Влади́мир Влади́мирович Пу́тин
+    description:
+    scripts:
+      - ./t2.sh
+  t3:
+    name:
+    description:
+    scripts:
+      - ./t3.sh
+  t4:
+    name:
+    description:
+    scripts:
+      - ./t4.sh
+  t5:
+    name:
+    description:
+    scripts:
+      - ./t5.sh
+
+matrix:
+  t1:
+    - t2
+  t2:
+    - t3
+    - t4
+  t3:
+  t4:
+    - t5
+    - t3
+  t5:
+
+configure:
+
+server:
+  port: 8080
+  host: 0.0.0.0

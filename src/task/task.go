@@ -4,10 +4,23 @@ import (
   "fmt"
   "sync"
   "github.com/satori/go.uuid"
+  "os/exec"
 )
 
 func version() {
   fmt.Println("package task")
+}
+
+type script struct {
+  path string
+  essential bool
+}
+
+func newscript(path string) *script {
+  return &script{
+    path: path
+    essential: true
+  }
 }
 
 type Task struct {
@@ -16,15 +29,16 @@ type Task struct {
   children []*Task
   name string
   msg string
-  script string
+  scripts []script
   timeout float64
   status string
-  priority uint64
+  retries: uint
+  priority uint
   mux sync.Mutex
 }
 
 func (t *Task) hasParent(p *Task) {
-  for _, _t := range t.Task {
+  for _, _t := range t.parents {
     if _t.id == p.id {
       return true
     }
@@ -42,7 +56,7 @@ func (t *Task) AddParent(p *Task) {
 }
 
 func (t *Task) hasChildren(c *Task) {
-  for _, _t := range t.Task {
+  for _, _t := range t.children {
     if _t.id == c.id {
       return true
     }
@@ -57,4 +71,15 @@ func (t *Task) AddChildren(c *Task) {
     c.AddParent(t)
   }
   t.mux.UnLock()
+}
+
+func (t *Task) runScripts(cmd *exec.Cmd) bool {
+  // needs implementation
+  for
+  return true
+}
+
+func (t *Task) runScript(cmd *exec.Cmd, i uint) bool {
+  // needs implementation
+  return true
 }

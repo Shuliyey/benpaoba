@@ -1,0 +1,43 @@
+tasks:
+  t1:
+    name:
+    description:
+    scripts:
+      - ./t1.sh
+  t2:
+    name:
+    description:
+    scripts:
+      - ./t2.sh
+  t3:
+    name:
+    description:
+    scripts:
+      - ./t3.sh
+  t4:
+    name:
+    description:
+    scripts:
+      - ./t4.sh
+  t5:
+    name:
+    description:
+    scripts:
+      - ./t5.sh
+
+matrix:
+  t1:
+    - t3
+    - t5
+  t2:
+    - t4
+    - t3
+  t3:
+    - t5
+  t4:
+  t5:
+
+configure:
+
+server:
+  port: 8080
